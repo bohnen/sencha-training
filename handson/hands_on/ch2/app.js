@@ -2,12 +2,16 @@
  * Created by bohnen on 2014/09/23.
  */
 Ext.onReady(function(){
-   Ext.create('Ext.Component', {
-       html: 'Hello, World!',
-       style: {background: 'red'},
+    var data = {
+        name: 'Taxi Amsterdam',
+        description: 'The only taxi in Amsterdam that does not circle around.'
+    };
+
+    Ext.create('Ext.Component', {
+       tpl: '<h1>{name}</h1><p>{description}</p>',
+       data: data,
+       styleHtmlContent: true,
        cls: 'box',
-       width: 300,
-       height: 100,
        renderTo: Ext.getBody()
-   });
+    });
 });
