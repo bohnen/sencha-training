@@ -1,25 +1,29 @@
-/**
- * Created by bohnen on 2014/09/23.
- */
-var data = {
-    name: 'Taxi Amsterdam',
-    description: 'The only taxi in Amsterdam that does not circle around.'
-};
+Ext.application({
+    requires: ['Ext.dataview.DataView','Ext.data.Store','Ext.Component'],
+    launch: function(){
+        // create a data store with id: CabStore
+        Ext.create('Ext.data.Store',{
+            id: 'CabStore',
+            fields: ['name','description'],
+            data: [
+                {name: "Taxi Amsterdam",
+                description: "The best taxi service of Amsterdam"},
+                {name: "Cab & co",
+                description: "Always, fast"}
+            ]
+        });
 
-var c = null;
+        var myTpl = Ext.create('Ext.XTemplate',
+        '<tpl for=".">','<div class="row">','<h1>{name}</h1><p>{description}</p>','</div>',
+        '</tpl>');
 
-Ext.require('Ext.Component');
-
-Ext.onReady(function(){
-    c = Ext.create('Ext.Component', {
-       tpl: '<h1>{name}</h1><p>{description}</p>',
-       data: data,
-       styleHtmlContent: true,
-       cls: 'box',
-       renderTo: Ext.getBody()
-    });
-    
-    data.description = "We like tourists a lot!";
-
-    c.setData(data);
+        Ext.create('Ext.DataView',{
+            itemTpl: '<h1>{name}</h1><p>{description}</p>',
+            store: 'CabStore',
+            styleHtmlContent: true,
+            cls: 'box',
+            fullscreen: true,
+            height: 250
+        });
+    }
 });
