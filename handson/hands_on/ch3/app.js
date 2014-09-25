@@ -5,12 +5,17 @@ Ext.application({
     launch: function(){
         var callTaxiEventHandler = function(b){
             console.log('you tapped the '+ b.getText() + 'button');
+
+            this.removeListener('tap',callTaxiEventHandler);
+            console.log('from now on, you can not call a handler');
         };
 
         var callTaxiButton1 = Ext.create('Ext.Button',{
             text: '1: Call a Taxi - Handler',
             margin: 5,
-            handler: callTaxiEventHandler
+            listeners: {
+                tap: callTaxiEventHandler
+            }
         });
 
         var callTaxiButton2 = Ext.create('Ext.Button',{
