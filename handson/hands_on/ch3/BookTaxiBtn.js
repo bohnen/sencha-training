@@ -10,5 +10,8 @@ Ext.define('BookTaxiBtn',{
     },
     bookTaxiEventHandler: function(b){
         console.log('You tapped the '+ b.getText() + 'button');
+    },
+    statics: {
+        version: "1.03"
     }
 });

@@ -41,5 +41,6 @@ Ext.application({
             ]
         });
 
+        console.log(BookTaxiBtn.version);
     }
 });
