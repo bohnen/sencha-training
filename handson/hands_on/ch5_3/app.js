@@ -3,7 +3,7 @@ Ext.onReady(function(){
         renderTo: Ext.getBody(),
         layout:{
             type: 'vbox',
-            align: 'start',
+            align: 'stretch',
             pack: 'start'
         },
         height: 500,
@@ -16,14 +16,16 @@ Ext.onReady(function(){
             },
             {
                 cls: 'box',
-                widh: 150,
+                width: 150,
                 html: 'width: 150',
+                flex: 1,
                 margin: 10
             },
             {
                 cls: 'box',
-                widh: 150,
+                width: 150,
                 html: 'width: 150',
+                flex: 2,
                 margin: 10
             }
         ]
