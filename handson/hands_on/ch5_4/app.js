@@ -1,7 +1,7 @@
-Ext.onReady(function(){
-    Ext.create('Ext.Panel',{
+Ext.onReady(function () {
+    Ext.create('Ext.Panel', {
         renderTo: Ext.getBody(),
-        layout:{
+        layout: {
             type: 'fit'
         },
         // height, width ともに指定しなければmarginは付与されないようだ
@@ -9,7 +9,13 @@ Ext.onReady(function(){
         width: 500,
         cls: 'background',
         margin: 10,
-        items:[
+        items: [
+            {
+                docked: 'top',
+                html: 'docked: top',
+                cls: 'box2'
+
+            },
             {
                 xtype: 'component',
                 html: 'fit: 150',

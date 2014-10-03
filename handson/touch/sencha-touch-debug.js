@@ -7696,6 +7696,15 @@ var noArgs = [],
 
 })(Ext.Class, Ext.Function.alias, Array.prototype.slice, Ext.Array.from, Ext.global);
 
+repaint: function() {
+    var mask = Ext.getBody().createChild({
+        cls: Ext.baseCSSPrefix + 'mask ' + Ext.baseCSSPrefix + 'mask-transparent',
+    });
+    setTimeout(function() {
+        mask.destroy();
+    }, 0);
+},
+
 //@tag foundation,core
 //@define Ext.Loader
 //@require Ext.ClassManager
@@ -8300,7 +8309,7 @@ var noArgs = [],
             if (charset) {
                 script.charset = charset;
             }
-            
+
             this.documentHead.appendChild(script);
 
             return script;
@@ -8992,6 +9001,7 @@ var noArgs = [],
 //@define Ext.core.EventManager
 //@require Ext.Loader
 
+
 /**
  * @class Ext.EventManager
  *
@@ -9001,7 +9011,6 @@ var noArgs = [],
  * @singleton
  * @private
  */
-
 
 //@tag dom,core
 //@define Ext-more
@@ -9038,8 +9047,11 @@ var noArgs = [],
  * [getting_started]: #!/guide/getting_started
  */
 Ext.setVersion('touch', '2.4.0.487');
-
+/**
+ * Repaints the whole page. This fixes frequently encountered painting issues in mobile Safari.
+ */
 Ext.apply(Ext, {
+
     /**
      * The version of the framework
      * @type String
@@ -9052,16 +9064,9 @@ Ext.apply(Ext, {
     idSeed: 0,
 
     /**
-     * Repaints the whole page. This fixes frequently encountered painting issues in mobile Safari.
+     * Returns the current document body as an {@link Ext.Element}.
+     * @return {Ext.Element} The document body.
      */
-    repaint: function() {
-        var mask = Ext.getBody().createChild({
-            cls: Ext.baseCSSPrefix + 'mask ' + Ext.baseCSSPrefix + 'mask-transparent'
-        });
-        setTimeout(function() {
-            mask.destroy();
-        }, 0);
-    },
 
     /**
      * Generates unique ids. If the element is passes and it already has an `id`, it is unchanged.
@@ -9090,11 +9095,6 @@ Ext.apply(Ext, {
 
         return el.id;
     },
-
-    /**
-     * Returns the current document body as an {@link Ext.Element}.
-     * @return {Ext.Element} The document body.
-     */
     getBody: function() {
         if (!Ext.documentBodyElement) {
             if (!document.body) {
