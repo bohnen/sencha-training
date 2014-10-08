@@ -10,11 +10,21 @@
     will need to resolve manually.
 */
 
+// Ext.Loaderに名前空間のルートディレクトリを指定する。
+Ext.Loader.setPath({
+    'Ext' : '../touch/src',
+    'FindACab' : 'app',
+    'Utils' : 'utils'
+});
+
 Ext.application({
+    // name フィールドはSenchaアプリケーションのネームスペースを指定する
     name: 'FindACab',
 
+    // Ext.Loaderに必要なクラスを教える
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'Utils.Commons'
     ],
 
     models: [
@@ -32,6 +42,8 @@ Ext.application({
     controllers: [
         'CabController'
     ],
+
+    // ブックマークアイコンの指定
     icon: {
         '57': 'resources/icons/Icon.png',
         '72': 'resources/icons/Icon~ipad.png',
@@ -39,6 +51,7 @@ Ext.application({
         '144': 'resources/icons/Icon~ipad@2x.png'
     },
 
+    // iosが勝手にアイコンに光沢付けるのを禁止
     isIconPrecomposed: true,
 
     startupImage: {
@@ -50,8 +63,11 @@ Ext.application({
         '1496x2048': 'resources/startup/1496x2048.png'
     },
 
+    // 全ての依存モジュールの読み込み後に呼ばれる。
     launch: function() {
         // Destroy the #appLoadingIndicator element
+        // ロード時の... イメージはindex.html にインラインで記載されたcss animationで行われている。
+        // このElementを削除する
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view

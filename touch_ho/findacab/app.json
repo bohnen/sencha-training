@@ -1,4 +1,6 @@
 {
+    // TODO: このファイルでデバッグモードをonにできるらしいが、記載が見当たらない。
+
     /**
      * The application's namespace, used by Sencha Command to generate classes
      */
@@ -49,7 +51,8 @@
         },
         {
             "path": "app.js",
-            "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */
+            "bundle": true,
+            /* Indicates that all class dependencies are concatenated into this file when build */
             "update": "delta"
         }
     ],
