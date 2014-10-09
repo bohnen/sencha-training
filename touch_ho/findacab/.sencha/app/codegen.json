@@ -318,6 +318,18 @@
         "controllerNamespace": "FindACab.controller",
         "name": "CabController"
       }
+    },
+    "app/model/Setting.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "b440abe61f1cfb3bbc31c9554696b4c7e9e2c329",
+      "parameters": {
+        "appName": "FindACab",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:auto:null,gps:boolean:null,city:string:null,country:string:null",
+        "modelFileName": "Setting",
+        "modelNamespace": "FindACab.model",
+        "name": "Setting"
+      }
     }
   }
 }
