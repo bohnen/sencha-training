@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="DB2 - @test" uuid="fc601d53-b85c-45d7-9b22-1c8701ff1453">
+    <database-info product="DB2/LINUXX8664" version="SQL09075" jdbc-version="4.0" driver-name="IBM Data Server Driver for JDBC and SQLJ" driver-version="4.7.85">
+      <extra-name-characters>@#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="DB2INST1" catalog=""/>
+    <table name="MITSUI_TOKUTEITANTO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="WEB_USR_ID" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054915020" columns="ID"/>
+    </table>
+    <table name="MNB_SANSHO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="CODE" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1"/>
+      <column name="MOBAN" sqlType="CHAR" precision="6" scale="0" nullable="false" jdbcType="1"/>
+      <column name="KANRI_ID" sqlType="CHAR" precision="11" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHOKEN_SAISHIN_BANGO" sqlType="VARCHAR" precision="11" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHOKEN_SAKUSEIBI" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="SAISHIN_FUBANBI" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="SAKUSEIBI" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="M_CHOHYO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="CHOHYO_ID" sqlType="CHAR" precision="5" scale="0" nullable="false" jdbcType="1"/>
+      <column name="CATEGORY" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="CHOHYO_MEI" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BIKO" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HYOJIJUN" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054920850" columns="ID"/>
+    </table>
+    <table name="M_CHOSON_JISHO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="YUBIN_BANGO" sqlType="VARCHAR" precision="7" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CHOSON_KANJI" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CHOSON_KANA" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SHIKUGUN_JISHO_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054918400" columns="ID"/>
+      <foreign-key name="M_CHOSON_JISHO_SHIKUGUN_JISHO_ID_M_SHIKUGUN_JISHO_ID_FK" columns="SHIKUGUN_JISHO_ID" ref-table="M_SHIKUGUN_JISHO" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="M_KOKUCHIMAE_KOMOKU" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="TITLE_LONG" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TITLE_SHORT" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAIYO" sqlType="VARCHAR" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KOKUCHI_TYPE" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="JUNJO" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="YUKO_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="YUKOBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="KAKUNIN_SHUTOKU_YOHI" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054916250" columns="ID"/>
+      <exported-key name="T_KOKUCHIMAE_KOMOKU_KOKUCHIMAE_KOMOKU_MST_ID_M_KOKUCHIMAE_KOMOKU_ID_FK" table="T_KOKUCHIMAE_KOMOKU" schema="DB2INST1" catalog="" columns="KOKUCHIMAE_KOMOKU_MST_ID"/>
+    </table>
+    <table name="M_SHIKUGUN_JISHO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="SHIKUGUN_KANJI" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SHIKUGUN_KANA" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TODOFUKEN_JISHO_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054914010" columns="ID"/>
+      <foreign-key name="M_SHIKUGUN_JISHO_TODOFUKEN_JISHO_ID_M_TODOFUKEN_JISHO_ID_FK" columns="TODOFUKEN_JISHO_ID" ref-table="M_TODOFUKEN_JISHO" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="M_CHOSON_JISHO_SHIKUGUN_JISHO_ID_M_SHIKUGUN_JISHO_ID_FK" table="M_CHOSON_JISHO" schema="DB2INST1" catalog="" columns="SHIKUGUN_JISHO_ID"/>
+    </table>
+    <table name="M_TODOFUKEN_JISHO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="TODOFUKEN_KANJI" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TODOFUKEN_KANA" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054913740" columns="ID"/>
+      <exported-key name="M_SHIKUGUN_JISHO_TODOFUKEN_JISHO_ID_M_TODOFUKEN_JISHO_ID_FK" table="M_SHIKUGUN_JISHO" schema="DB2INST1" catalog="" columns="TODOFUKEN_JISHO_ID"/>
+    </table>
+    <table name="NINSHO_HIKITSUGI" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="PPL_NINSHO_TOKEN" sqlType="VARCHAR" precision="36" scale="0" nullable="false" jdbcType="12"/>
+      <column name="WEB_USR_ID" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="WEB_PASSWORD" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="WEB_USR_SHIMEI_KJ" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LOGIN_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="LOGIN_DATETIME_PRE" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="LOGOUT_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="PW_EXPIRY_DATE" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="USED_SERVER" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="REVOKE_FLG" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="USED_FLG" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="USER_GROUP" sqlType="CHAR" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="USER_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="TERM_GROUP" sqlType="CHAR" precision="6" scale="0" nullable="false" jdbcType="1"/>
+      <column name="LOGON_PERM_FLG" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ACCESS_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="STAFF_DIV" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="STAFF_NO" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="CHECK_DIGIT" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="BIZ_DIV" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="PASSWORD" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="KYOTEN_CODE" sqlType="VARCHAR" precision="6" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PRACTICE_MODE" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="SHOU_NO" sqlType="VARCHAR" precision="2" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DOUITSU" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KEI_KANA" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KEI_KANJI" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KEI_BIRTH" sqlType="VARCHAR" precision="8" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KEI_SEI" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KEI_POST" sqlType="VARCHAR" precision="7" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KEI_JUUSHO" sqlType="VARCHAR" precision="44" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HIHO_KANA" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HIHO_KANJI" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HIHO_BIRTH" sqlType="VARCHAR" precision="8" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HIHO_SEI" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOKEN_FLAG" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHOU_CODE" sqlType="VARCHAR" precision="2" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHOU_KIND" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHOU_PLAN" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOKU_SEIKATSU" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOKU_GANSHINDAN" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOKU_SENSHIN" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOKU_JOSEI" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="GAMEN_ID" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SAGYOU_TYPE" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOROKUBANGO" sqlType="CHAR" precision="13" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KOINBANGO" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DAIRITEN_TYPE" sqlType="VARCHAR" precision="2" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KYOTEN_CODE_P" sqlType="VARCHAR" precision="6" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DAIRITEN_CODE" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DAIRITEN_MEI" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHITEN_CODE" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHITEN_MEI" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="UKETSUKE_ID" sqlType="VARCHAR" precision="11" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SEKKEI_NO" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOSHIKOMI_NO" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1"/>
+      <column name="TEST_ENV_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+    </table>
+    <table name="T_BOSHU" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="SHIMEI_KJ" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIMEI_KN" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="USER_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="DAIRITEN_TYPE" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DAIRITEN_CODE" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DAIRITEN_MEI" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KYOTEN_CODE_P" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHITEN_CODE" sqlType="CHAR" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHITEN_MEI" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BOSHU_TOBAN" sqlType="CHAR" precision="13" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KOIN_BANGO" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="BOSHU_RENRAKUSAKI" sqlType="VARCHAR" precision="13" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DAIRITEN_JUSHO" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054915540" columns="ID"/>
+      <exported-key name="T_MOSHIKOMI_TETSUZUKI_TETSUZUKI_TANTOSHA_ID_T_BOSHU_ID_FK" table="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" columns="TETSUZUKI_TANTOSHA_ID"/>
+      <exported-key name="T_MOS_SEKKEI_KYOSEKISHA_ID_T_BOSHU_ID_FK" table="T_MOS_SEKKEI" schema="DB2INST1" catalog="" columns="KYOSEKISHA_ID"/>
+    </table>
+    <table name="T_CHOHYO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="CHOHYO_ID" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CATEGORY" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CHOHYO_MEI" sqlType="VARCHAR" precision="33" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CHOHYO_FORMAT" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="CHOHYO_DATA" sqlType="BLOB" precision="33" scale="0" nullable="false" jdbcType="2004"/>
+      <column name="INSATSU_NICHIJI" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="MOBAN" sqlType="CHAR" precision="9" scale="0" nullable="false" jdbcType="1"/>
+      <column name="SHOKEN_SAISHIN_BANGO" sqlType="VARCHAR" precision="11" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KANRI_ID" sqlType="CHAR" precision="11" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOSHIKOMI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054921550" columns="ID"/>
+      <foreign-key name="T_CHOHYO_MOSHIKOMI_ID_T_MOSHIKOMI_ID_FK" columns="MOSHIKOMI_ID" ref-table="T_MOSHIKOMI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="T_IKO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="IKO_STATUS" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="TOKKI" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIMEI_KJ" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DAIRITEN_CODE" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DAIRITEN_MEI" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BOSHU_SIGN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="IKO_KOMOKU_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054917340" columns="ID"/>
+      <foreign-key name="T_IKO_IKO_KOMOKU_ID_T_IKO_KOMOKU_ID_FK" columns="IKO_KOMOKU_ID" ref-table="T_IKO_KOMOKU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_IKO_BOSHU_SIGN_ID_T_SIGN_ID_FK" columns="BOSHU_SIGN_ID" ref-table="T_SIGN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="T_MOSHIKOMI_IKO_ID_T_IKO_ID_FK" table="T_MOSHIKOMI" schema="DB2INST1" catalog="" columns="IKO_ID"/>
+    </table>
+    <table name="T_IKO_KOMOKU" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="A1" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A2" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A3" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A4" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A_TOSHI_KEIKEN" sqlType="CHAR" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A_TOSHI_KEIKEN_TEXT" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="A5" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A6" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A7" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A_JYUTO_SHIKIN" sqlType="CHAR" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A_JYUTO_SHIKIN_TEXT" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="A8" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A9" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A10" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A11" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A12" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A13" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A14" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A15" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A16" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A17" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A18" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A19" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A20" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A21" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A22" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A23" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="A24" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054919470" columns="ID"/>
+      <exported-key name="T_IKO_IKO_KOMOKU_ID_T_IKO_KOMOKU_ID_FK" table="T_IKO" schema="DB2INST1" catalog="" columns="IKO_KOMOKU_ID"/>
+    </table>
+    <table name="T_KOKUCHI" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="OVER16" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="KOKUCHI_TYPE" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KOKUCHIBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="SELECTION_TYPE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LIFE_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CHANNEL" sqlType="VARCHAR" precision="2" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HEIGHT" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="WEIGHT" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="AGE" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="CASE_ID" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="IS_EXISTS_CONFIRMED_DISCLOSURES" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="KOKUCHI_STATUS" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHINKEN_TSUZUKI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHINKEN_TSUZUKI_SONOTA" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KOKUCHI_JISSHI_USR_ID" sqlType="VARCHAR" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KOKUCHI_RENKEI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HIHO_SIGN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HIHO_SHINKEN_SIGN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054920590" columns="ID"/>
+      <foreign-key name="T_KOKUCHI_KOKUCHI_RENKEI_ID_T_KOKUCHI_RENKEI_ID_FK" columns="KOKUCHI_RENKEI_ID" ref-table="T_KOKUCHI_RENKEI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_KOKUCHI_HIHO_SIGN_ID_T_SIGN_ID_FK" columns="HIHO_SIGN_ID" ref-table="T_SIGN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_KOKUCHI_HIHO_SHINKEN_SIGN_ID_T_SIGN_ID_FK" columns="HIHO_SHINKEN_SIGN_ID" ref-table="T_SIGN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="T_KOKUCHIMAE_KOMOKU_KOKUCHI_ID_T_KOKUCHI_ID_FK" table="T_KOKUCHIMAE_KOMOKU" schema="DB2INST1" catalog="" columns="KOKUCHI_ID"/>
+      <exported-key name="T_KOKUCHI_JIKO_KOKUCHI_ID_T_KOKUCHI_ID_FK" table="T_KOKUCHI_JIKO" schema="DB2INST1" catalog="" columns="KOKUCHI_ID"/>
+      <exported-key name="T_MOSHIKOMI_TETSUZUKI_KOKUCHI_ID_T_KOKUCHI_ID_FK" table="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" columns="KOKUCHI_ID"/>
+      <exported-key name="T_SATEI_KEKKA_KOKUCHI_ID_T_KOKUCHI_ID_FK" table="T_SATEI_KEKKA" schema="DB2INST1" catalog="" columns="KOKUCHI_ID"/>
+      <exported-key name="T_SATEI_Q_KOKUCHI_ID_T_KOKUCHI_ID_FK" table="T_SATEI_Q" schema="DB2INST1" catalog="" columns="KOKUCHI_ID"/>
+    </table>
+    <table name="T_KOKUCHIMAE_KOMOKU" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="KAITO" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KOKUCHIMAE_KOMOKU_MST_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="KOKUCHI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054919840" columns="ID"/>
+      <foreign-key name="T_KOKUCHIMAE_KOMOKU_KOKUCHIMAE_KOMOKU_MST_ID_M_KOKUCHIMAE_KOMOKU_ID_FK" columns="KOKUCHIMAE_KOMOKU_MST_ID" ref-table="M_KOKUCHIMAE_KOMOKU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_KOKUCHIMAE_KOMOKU_KOKUCHI_ID_T_KOKUCHI_ID_FK" columns="KOKUCHI_ID" ref-table="T_KOKUCHI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="T_KOKUCHI_ACTION" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="RISK_TYPE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RISK_TYPE_CODE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LABEL" sqlType="VARCHAR" precision="55" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054918670" columns="ID"/>
+      <exported-key name="T_KOKUCHI_JIKO_KOKUCHI_ACTION_ID_T_KOKUCHI_ACTION_ID_FK" table="T_KOKUCHI_JIKO" schema="DB2INST1" catalog="" columns="KOKUCHI_ACTION_ID"/>
+    </table>
+    <table name="T_KOKUCHI_JIKO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="JUNJO" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="DISCLOSURE_ID" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BASE_QUESTION_IDS" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SATEI_Q_BIND" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VERSION" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS_CODE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CATEGORY" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CATEGORY_CODE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KNOWN_DISCLOSURE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CONDITION_ID" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KOKUCHI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="KOKUCHI_ACTION_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054922060" columns="ID"/>
+      <foreign-key name="T_KOKUCHI_JIKO_KOKUCHI_ID_T_KOKUCHI_ID_FK" columns="KOKUCHI_ID" ref-table="T_KOKUCHI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_KOKUCHI_JIKO_KOKUCHI_ACTION_ID_T_KOKUCHI_ACTION_ID_FK" columns="KOKUCHI_ACTION_ID" ref-table="T_KOKUCHI_ACTION" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="T_KOKUCHI_Q_KOKUCHI_JIKO_ID_T_KOKUCHI_JIKO_ID_FK" table="T_KOKUCHI_Q" schema="DB2INST1" catalog="" columns="KOKUCHI_JIKO_ID"/>
+    </table>
+    <table name="T_KOKUCHI_Q" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="QUESTION" sqlType="VARCHAR" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ANSWER_VALUE" sqlType="VARCHAR" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="JUNJO" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="REFLEXIVE_QUESTION_ID" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ANSWER_INDEX" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ANSWER_TEXT" sqlType="VARCHAR" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPLAY_TEXT" sqlType="VARCHAR" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="INTERACTIVE" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="KOKUCHI_JIKO_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054921090" columns="ID"/>
+      <foreign-key name="T_KOKUCHI_Q_KOKUCHI_JIKO_ID_T_KOKUCHI_JIKO_ID_FK" columns="KOKUCHI_JIKO_ID" ref-table="T_KOKUCHI_JIKO" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="T_KOKUCHI_RENKEI" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="SAIKO_KETSUATSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="SAITEI_KETSUATSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="HB_A1C" sqlType="DECIMAL" precision="2" scale="1" nullable="true" jdbcType="3"/>
+      <column name="KUFUKU_JIKETTO" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ZUIJI_KETTO" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="LDL_CHOLESTEROL" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="HDL_CHOLESTEROL" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="CHUSEI_SHIBO" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NYUSANCHI" sqlType="DECIMAL" precision="2" scale="1" nullable="true" jdbcType="3"/>
+      <column name="HEMOGLOBIN" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="GOT" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="GPT" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="GAMMA_GTP" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NYOTO" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NYOTOSUCHI_HENKAN" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NYOTANPAKU" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NYOTANPAKUSUCHI_HENKAN" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NYOSENKETSU" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NYOSENKETSUSUCHI_HENKAN" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="MYAKUHAKUSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="KETTAISU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="WBCSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NINSHIN_GETSUSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="KYOSEI_SHIRYOKU_HIDARI" sqlType="DECIMAL" precision="3" scale="2" nullable="true" jdbcType="3"/>
+      <column name="KYOSEI_SHIRYOKU_MIGI" sqlType="DECIMAL" precision="3" scale="2" nullable="true" jdbcType="3"/>
+      <column name="NYUIN_KIKAN" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="SO_KORESUTERORU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NINSHIN_SHUSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="CHIRYO_KAISHI_NENGETSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="SAISHU_JUSHIN_NENGETSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="KANCHI_NENGETSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NYUIN_KAISHI_NENGETSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="NYUIN_SHURYO_NENGETSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="KENSA_NENGETSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="JUSHIN_NENGETSU" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="CHIRYO_KAISHI_KEIKA_NENGETSU" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CHIYU_GO_KEIKA_NENGETSU" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054918140" columns="ID"/>
+      <exported-key name="T_KOKUCHI_KOKUCHI_RENKEI_ID_T_KOKUCHI_RENKEI_ID_FK" table="T_KOKUCHI" schema="DB2INST1" catalog="" columns="KOKUCHI_RENKEI_ID"/>
+    </table>
+    <table name="T_MOSHIKOMI" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="MOBAN" sqlType="CHAR" precision="9" scale="0" nullable="false" jdbcType="1"/>
+      <column name="MOSHIKOMIBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="P_YUKOBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="DOJI_STATUS" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHOKEN_SAISHIN_BANGO" sqlType="VARCHAR" precision="11" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HORYU_DATA_SAKUSEIBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="MOSHIKOMI_DATA_SAKUSEIBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="SNAPSHOT_ID" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="SNAPSHOT_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOSHIKOMI_TETSUZUKI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="MOS_SEKKEI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="IKO_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054914780" columns="ID"/>
+      <foreign-key name="T_MOSHIKOMI_IKO_ID_T_IKO_ID_FK" columns="IKO_ID" ref-table="T_IKO" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_MOSHIKOMI_TETSUZUKI_ID_T_MOSHIKOMI_TETSUZUKI_ID_FK" columns="MOSHIKOMI_TETSUZUKI_ID" ref-table="T_MOSHIKOMI_TETSUZUKI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_MOS_SEKKEI_ID_T_MOS_SEKKEI_ID_FK" columns="MOS_SEKKEI_ID" ref-table="T_MOS_SEKKEI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="T_CHOHYO_MOSHIKOMI_ID_T_MOSHIKOMI_ID_FK" table="T_CHOHYO" schema="DB2INST1" catalog="" columns="MOSHIKOMI_ID"/>
+    </table>
+    <table name="T_MOSHIKOMI_JUSHIN_CHOHYO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="CHOHYO_DATA" sqlType="BLOB" precision="33" scale="0" nullable="false" jdbcType="2004"/>
+      <column name="MOBAN1" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN2" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN3" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN4" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN5" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN6" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN7" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN8" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN9" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN10" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054916000" columns="ID"/>
+    </table>
+    <table name="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="KEI_KIYAKU_DOI_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="HIHO_KIYAKU_DOI_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="JUYOJIKO_KAKUNIN_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="MOSHIKOMI_TETSUZUKI_STATUS_DISP" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="MOSHIKOMI_TETSUZUKI_STATUS" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="MOSHIKOMI_TETSUZUKI_KANRYOBI" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="DATA_SOSHIMBI" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="KOKUCHI_HOHO" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHIHARAI_HOHO" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="FATCA_TAISHO_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="HIHO_SETAINUSHI_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="HIHO_HOSHOGAKU_OVER1000MAN_IJO_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="HIHO_HOSHOGAKU_CHOKA_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="HIHO_HOSHOGAKU_CHOKA_RIYU" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIHO_HOSHOGAKU_CHOKA_RIYU_SONOTA" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOKENRYO_HARAIKOMI_TSUCHI_YOHI_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="TORIHIKI_GYOSHU_CODE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="TORIHIKI_GYOSHU_MEI" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KEI_STEP" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HIHO_STEP" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="GOKEI_S_KOKUCHI_SENTAKU_HOHO" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KOGAKU_MOS_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="TAKENSU_KANYU_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="TANKI_SHUCHU_KANYU_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="TORIHO_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="KOKUCHI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="SHIHARAI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="KEI_SIGN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HIHO_SIGN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="KEI_SHINKEN_SIGN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HIHO_SHINKEN_SIGN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="TETSUZUKI_TANTOSHA_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054917860" columns="ID"/>
+      <foreign-key name="T_MOSHIKOMI_TETSUZUKI_TETSUZUKI_TANTOSHA_ID_T_BOSHU_ID_FK" columns="TETSUZUKI_TANTOSHA_ID" ref-table="T_BOSHU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_TETSUZUKI_KOKUCHI_ID_T_KOKUCHI_ID_FK" columns="KOKUCHI_ID" ref-table="T_KOKUCHI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_TETSUZUKI_SHIHARAI_ID_T_SHIHARAI_ID_FK" columns="SHIHARAI_ID" ref-table="T_SHIHARAI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_TETSUZUKI_KEI_SIGN_ID_T_SIGN_ID_FK" columns="KEI_SIGN_ID" ref-table="T_SIGN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_TETSUZUKI_HIHO_SIGN_ID_T_SIGN_ID_FK" columns="HIHO_SIGN_ID" ref-table="T_SIGN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_TETSUZUKI_KEI_SHINKEN_SIGN_ID_T_SIGN_ID_FK" columns="KEI_SHINKEN_SIGN_ID" ref-table="T_SIGN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_TETSUZUKI_HIHO_SHINKEN_SIGN_ID_T_SIGN_ID_FK" columns="HIHO_SHINKEN_SIGN_ID" ref-table="T_SIGN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOSHIKOMI_TETSUZUKI_TORIHO_ID_T_TORIHO_ID_FK" columns="TORIHO_ID" ref-table="T_TORIHO" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="T_MOSHIKOMI_MOSHIKOMI_TETSUZUKI_ID_T_MOSHIKOMI_TETSUZUKI_ID_FK" table="T_MOSHIKOMI" schema="DB2INST1" catalog="" columns="MOSHIKOMI_TETSUZUKI_ID"/>
+    </table>
+    <table name="T_MOS_KOKYAKU" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="SHIMEI_SEI_KJ" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIMEI_MEI_KJ" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIMEI_SEI_KN" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIMEI_MEI_KN" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SEIBETSU" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SEINEN" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="TSUZUKI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="TSUZUKI_SONOTA" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHINKEN_TSUZUKI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHINKEN_TSUZUKI_SONOTA" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="YUBIN" sqlType="VARCHAR" precision="7" scale="0" nullable="true" jdbcType="12"/>
+      <column name="JUSHO" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DENWA" sqlType="VARCHAR" precision="13" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NENSHU" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="GYOSHU_CODE" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="GYOSHU_MEI" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KIMMUSAKI_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KIMMUSAKI_MEI" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIGOTO_CODE" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHIGOTO_NAIYO" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHOKUGYO_CODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHOKUGYO_NYURYOKU_KANRYO_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054914540" columns="ID"/>
+      <exported-key name="T_MOS_SEKKEI_KEI_ID_T_MOS_KOKYAKU_ID_FK" table="T_MOS_SEKKEI" schema="DB2INST1" catalog="" columns="KEI_ID"/>
+      <exported-key name="T_MOS_SEKKEI_HIHO_ID_T_MOS_KOKYAKU_ID_FK" table="T_MOS_SEKKEI" schema="DB2INST1" catalog="" columns="HIHO_ID"/>
+      <exported-key name="T_MOS_SEKKEI_KEI_SHINKEN_ID_T_MOS_KOKYAKU_ID_FK" table="T_MOS_SEKKEI" schema="DB2INST1" catalog="" columns="KEI_SHINKEN_ID"/>
+      <exported-key name="T_MOS_SEKKEI_HIHO_SHINKEN_ID_T_MOS_KOKYAKU_ID_FK" table="T_MOS_SEKKEI" schema="DB2INST1" catalog="" columns="HIHO_SHINKEN_ID"/>
+    </table>
+    <table name="T_MOS_SEKKEI" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="SEKKEI_BANGO" sqlType="CHAR" precision="12" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHOHIN_CATE_CODE" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOKEN_TYPE" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HARAI_KEIRO" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HARAIKATA" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="ZENNO_P" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="ZENNO_KAISU" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="S" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="S_TANI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="P" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="P_TANI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="PPL_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DAIRI_SEIKYU_TOKUYAKU_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="LIVING_NEEDS_TOKUYAKU_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="NENKIN_SHIHARAI_TOKUYAKU_TYPE" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KOJIN_NENKIN_HOKENRYO_ZEISEI_TEKIKAKU_TOKUYAKU_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="TSUSAN_JISSHI_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="UKE_PATTERN" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NENKIN_UKE_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KANRI_ID" sqlType="CHAR" precision="11" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KANRI_ID_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="KOKUCHI_SENTAKU_HOHO" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="DONIN_BETSUNIN_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHINKEN_DONIN_BETSUNIN_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SEIZON_KYUFU_KATA" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KEISAN_KIJUMBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="SEKKEI_YUKO_KIGEN" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="P_YUKO_KIGEN" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="SHOGAI_UKE_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KYUFU_UKE_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SEKKEI_SHOKAI_SAKUSEIBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="MNB_TORIKESHI_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="YEN_KANSAN_P" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="YEN_DATE_HARAI_P" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="GOKEI_HARAI_P" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="RYOSYUBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="TESURYO" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="KEI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HIHO_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="KEI_SHINKEN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HIHO_SHINKEN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="DAIRI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="SHUKEIYAKU_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="KYOSEKISHA_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054920090" columns="ID"/>
+      <foreign-key name="T_MOS_SEKKEI_KYOSEKISHA_ID_T_BOSHU_ID_FK" columns="KYOSEKISHA_ID" ref-table="T_BOSHU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOS_SEKKEI_KEI_ID_T_MOS_KOKYAKU_ID_FK" columns="KEI_ID" ref-table="T_MOS_KOKYAKU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOS_SEKKEI_HIHO_ID_T_MOS_KOKYAKU_ID_FK" columns="HIHO_ID" ref-table="T_MOS_KOKYAKU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOS_SEKKEI_KEI_SHINKEN_ID_T_MOS_KOKYAKU_ID_FK" columns="KEI_SHINKEN_ID" ref-table="T_MOS_KOKYAKU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOS_SEKKEI_HIHO_SHINKEN_ID_T_MOS_KOKYAKU_ID_FK" columns="HIHO_SHINKEN_ID" ref-table="T_MOS_KOKYAKU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOS_SEKKEI_SHUKEIYAKU_ID_T_MOS_SHUTOKU_ID_FK" columns="SHUKEIYAKU_ID" ref-table="T_MOS_SHUTOKU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_MOS_SEKKEI_DAIRI_ID_T_MOS_UKE_ID_FK" columns="DAIRI_ID" ref-table="T_MOS_UKE" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="T_MOSHIKOMI_MOS_SEKKEI_ID_T_MOS_SEKKEI_ID_FK" table="T_MOSHIKOMI" schema="DB2INST1" catalog="" columns="MOS_SEKKEI_ID"/>
+      <exported-key name="T_MOS_UKE_UKE_MOS_SEKKEI_ID_T_MOS_SEKKEI_ID_FK" table="T_MOS_UKE" schema="DB2INST1" catalog="" columns="UKE_MOS_SEKKEI_ID"/>
+    </table>
+    <table name="T_MOS_SHUTOKU" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="S" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="S_TANI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOKEN_KIKAN" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HARAI_KIKAN" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NEN_SAI_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="P" sqlType="DECIMAL" precision="15" scale="0" nullable="true" jdbcType="3"/>
+      <column name="P_TANI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="KEIYAKUJI_YOTEI_RIRITSU" sqlType="DECIMAL" precision="6" scale="3" nullable="true" jdbcType="3"/>
+      <column name="SAITEI_HOSHO_YOTEI_RIRITSU" sqlType="DECIMAL" precision="6" scale="3" nullable="true" jdbcType="3"/>
+      <column name="YOTEI_RIRITSU" sqlType="DECIMAL" precision="6" scale="3" nullable="true" jdbcType="3"/>
+      <column name="NENKIN_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NENKIN_KIKAN" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="NENKIN_KAISHI_NENREI" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="NENKIN_KAISHI_SAITEI_HOSHO_YOTEI_RIRITSU" sqlType="DECIMAL" precision="6" scale="3" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054921800" columns="ID"/>
+      <exported-key name="T_MOS_SEKKEI_SHUKEIYAKU_ID_T_MOS_SHUTOKU_ID_FK" table="T_MOS_SEKKEI" schema="DB2INST1" catalog="" columns="SHUKEIYAKU_ID"/>
+    </table>
+    <table name="T_MOS_UKE" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="SHIMEI_SEI_KJ" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIMEI_MEI_KJ" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIMEI_SEI_KN" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHIMEI_MEI_KN" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SEINEN" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="SEIBETSU" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="TSUZUKI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="TSUZUKI_OTHER" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="UKETORI_WARIARI" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="JUSHO_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="YUBIN" sqlType="VARCHAR" precision="7" scale="0" nullable="true" jdbcType="12"/>
+      <column name="JUSHO" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="UKE_MOS_SEKKEI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054914280" columns="ID"/>
+      <foreign-key name="T_MOS_UKE_UKE_MOS_SEKKEI_ID_T_MOS_SEKKEI_ID_FK" columns="UKE_MOS_SEKKEI_ID" ref-table="T_MOS_SEKKEI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="T_MOS_SEKKEI_DAIRI_ID_T_MOS_UKE_ID_FK" table="T_MOS_SEKKEI" schema="DB2INST1" catalog="" columns="DAIRI_ID"/>
+    </table>
+    <table name="T_SATEI_KEKKA" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="RISK_TYPE_UNDERWRITING_STATUS_CODE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RISK_TYPE_UNDERWRITING_STATUS" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RISK_TYPE_CODE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RISK_TYPE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KOKUCHI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054915270" columns="ID"/>
+      <foreign-key name="T_SATEI_KEKKA_KOKUCHI_ID_T_KOKUCHI_ID_FK" columns="KOKUCHI_ID" ref-table="T_KOKUCHI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="T_SATEI_Q" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="TYPE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="QUESTION" sqlType="VARCHAR" precision="1000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ANSWER_VALUE" sqlType="VARCHAR" precision="1000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BASE_QUESTION_ID" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="POSITION" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="CATEGORY" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CATEGORY_CODE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TRIGGER_TYPE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TRIGGER_TYPE_CODE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ANSWER" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CODE" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LINKED_CONDITIONS" sqlType="VARCHAR" precision="33" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KOKUCHI_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054917600" columns="ID"/>
+      <foreign-key name="T_SATEI_Q_KOKUCHI_ID_T_KOKUCHI_ID_FK" columns="KOKUCHI_ID" ref-table="T_KOKUCHI" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="T_SHIHARAI" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="CREDIT_KAISHA" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CREDIT_BANGO" sqlType="CHAR" precision="16" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CREDIT_YUKOKIGEN" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="CREDIT_MEIGI_KN" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAIYO_KAKUNIN_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="SHIHARAI_STATUS" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MOBAN" sqlType="CHAR" precision="9" scale="0" nullable="false" jdbcType="1"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054916940" columns="ID"/>
+      <exported-key name="T_MOSHIKOMI_TETSUZUKI_SHIHARAI_ID_T_SHIHARAI_ID_FK" table="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" columns="SHIHARAI_ID"/>
+    </table>
+    <table name="T_SIGN" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="SHOMEI_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHOMEISHA_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="SHOMEI_DATA" sqlType="BLOB" precision="33" scale="0" nullable="true" jdbcType="2004"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054916700" columns="ID"/>
+      <exported-key name="T_IKO_BOSHU_SIGN_ID_T_SIGN_ID_FK" table="T_IKO" schema="DB2INST1" catalog="" columns="BOSHU_SIGN_ID"/>
+      <exported-key name="T_KOKUCHI_HIHO_SIGN_ID_T_SIGN_ID_FK" table="T_KOKUCHI" schema="DB2INST1" catalog="" columns="HIHO_SIGN_ID"/>
+      <exported-key name="T_KOKUCHI_HIHO_SHINKEN_SIGN_ID_T_SIGN_ID_FK" table="T_KOKUCHI" schema="DB2INST1" catalog="" columns="HIHO_SHINKEN_SIGN_ID"/>
+      <exported-key name="T_MOSHIKOMI_TETSUZUKI_KEI_SIGN_ID_T_SIGN_ID_FK" table="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" columns="KEI_SIGN_ID"/>
+      <exported-key name="T_MOSHIKOMI_TETSUZUKI_HIHO_SIGN_ID_T_SIGN_ID_FK" table="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" columns="HIHO_SIGN_ID"/>
+      <exported-key name="T_MOSHIKOMI_TETSUZUKI_KEI_SHINKEN_SIGN_ID_T_SIGN_ID_FK" table="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" columns="KEI_SHINKEN_SIGN_ID"/>
+      <exported-key name="T_MOSHIKOMI_TETSUZUKI_HIHO_SHINKEN_SIGN_ID_T_SIGN_ID_FK" table="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" columns="HIHO_SHINKEN_SIGN_ID"/>
+    </table>
+    <table name="T_TORIHO" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="HOKOKU_KINYUBI" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="TORIHO_STATUS" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="P_FURIKOMI_STATUS" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHINSA_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHINSA_YOTEIBI" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHINSA_YOTEIBI_CHOSEIBI_FLAG" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="SHINSA_HOSOKU_JIKO" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KYODO_TOBAN" sqlType="CHAR" precision="13" scale="0" nullable="true" jdbcType="1"/>
+      <column name="BOSHU_SEI_KJ" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BOSHU_MEI_KJ" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAISEKI_SEI_KJ" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAISEKI_MEI_KJ" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOMON_SAKI_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOMON_SAKI_HIHO_RENRAKU_TYPE" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOMON_SAKI_HIHO_RENRAKU_SONOTA" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOMON_SAKI_KINMU_YUBIN" sqlType="VARCHAR" precision="7" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOMON_SAKI_KINMU_JUSHO" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOMON_SAKI_KINMU_DENWA" sqlType="VARCHAR" precision="13" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HONKAKU_TOKKI_JIKO" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KAKUNIN_TOKKI_JIKO" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KEI_MENDAN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HIHO_MENDAN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="KEI_SHINKEN_MENDAN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="HIHO_SHINKEN_MENDAN_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="TORIHO_KOMOKU_ID" sqlType="DECIMAL" precision="10" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054918920" columns="ID"/>
+      <foreign-key name="T_TORIHO_TORIHO_KOMOKU_ID_T_TORIHO_KOMOKU_ID_FK" columns="TORIHO_KOMOKU_ID" ref-table="T_TORIHO_KOMOKU" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_TORIHO_KEI_MENDAN_ID_T_TORIHO_MENDAN_ID_FK" columns="KEI_MENDAN_ID" ref-table="T_TORIHO_MENDAN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_TORIHO_HIHO_MENDAN_ID_T_TORIHO_MENDAN_ID_FK" columns="HIHO_MENDAN_ID" ref-table="T_TORIHO_MENDAN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_TORIHO_KEI_SHINKEN_MENDAN_ID_T_TORIHO_MENDAN_ID_FK" columns="KEI_SHINKEN_MENDAN_ID" ref-table="T_TORIHO_MENDAN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="T_TORIHO_HIHO_SHINKEN_MENDAN_ID_T_TORIHO_MENDAN_ID_FK" columns="HIHO_SHINKEN_MENDAN_ID" ref-table="T_TORIHO_MENDAN" ref-schema="DB2INST1" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="T_MOSHIKOMI_TETSUZUKI_TORIHO_ID_T_TORIHO_ID_FK" table="T_MOSHIKOMI_TETSUZUKI" schema="DB2INST1" catalog="" columns="TORIHO_ID"/>
+    </table>
+    <table name="T_TORIHO_KOMOKU" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="KOMOKU_A1_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="KOMOKU_A2_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="KOMOKU_A3_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="KOMOKU_A4_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054920340" columns="ID"/>
+      <exported-key name="T_TORIHO_TORIHO_KOMOKU_ID_T_TORIHO_KOMOKU_ID_FK" table="T_TORIHO" schema="DB2INST1" catalog="" columns="TORIHO_KOMOKU_ID"/>
+    </table>
+    <table name="T_TORIHO_MENDAN" schema="DB2INST1" catalog="" type="TABLE">
+      <column name="ID" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" autoIncrement="true"/>
+      <column name="MENDAN_BASHO" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="MENDAN_BASHO_SONOTA" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="KAKUNIN_NICHIJI" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <column name="SHORUI" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="TOKUTEI_BANGO" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HOSOKU_SHORUI" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
+      <column name="HOSOKU_SHORUI_TOKUTEI_BANGO" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SHINKEN_KAKUNIN_KOTO_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="SHINKEN_KAKUNIN_KOTEKI_FLAG" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="CREATED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="MODIFIED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93"/>
+      <column name="DELETED_DATETIME" sqlType="TIMESTAMP" precision="26" scale="6" nullable="true" jdbcType="93"/>
+      <primary-key name="SQL141010054919210" columns="ID"/>
+      <exported-key name="T_TORIHO_KEI_MENDAN_ID_T_TORIHO_MENDAN_ID_FK" table="T_TORIHO" schema="DB2INST1" catalog="" columns="KEI_MENDAN_ID"/>
+      <exported-key name="T_TORIHO_HIHO_MENDAN_ID_T_TORIHO_MENDAN_ID_FK" table="T_TORIHO" schema="DB2INST1" catalog="" columns="HIHO_MENDAN_ID"/>
+      <exported-key name="T_TORIHO_KEI_SHINKEN_MENDAN_ID_T_TORIHO_MENDAN_ID_FK" table="T_TORIHO" schema="DB2INST1" catalog="" columns="KEI_SHINKEN_MENDAN_ID"/>
+      <exported-key name="T_TORIHO_HIHO_SHINKEN_MENDAN_ID_T_TORIHO_MENDAN_ID_FK" table="T_TORIHO" schema="DB2INST1" catalog="" columns="HIHO_SHINKEN_MENDAN_ID"/>
+    </table>
+  </data-source>
+</component>
