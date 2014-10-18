@@ -3,21 +3,7 @@ Ext.define('FindACab.controller.CabController', {
     
     config: {
         models: ['Cab'],
-        stores: ['Cabs'],
-
-        refs: {
-            main: 'mainview'
-            
-        },
-        control: {
-            'mainview': {
-                initialize: 'onInitMain'
-            },
-            'button[action=press]': {
-                tap: 'onTapMain'
-            }
-            
-        }
+        stores: ['Cabs']
     },
 
     init: function(){
