@@ -1,5 +1,6 @@
 Ext.define('FindACab.model.Setting', {
     extend: 'Ext.data.Model',
+    requires: ['Ext.data.identifier.Uuid'],
     
     config: {
         idProperty: 'id',
@@ -20,6 +21,10 @@ Ext.define('FindACab.model.Setting', {
             type: 'presence',
             field: 'country',
             message: "Please provide a country."
-        }]
+        }],
+        proxy: {
+            type: 'localstorage',
+            id: "Setting"
+        }
     }
 });
