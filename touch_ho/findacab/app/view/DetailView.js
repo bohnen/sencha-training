@@ -1,6 +1,6 @@
 Ext.define('FindACab.view.DetailView',{
     extend: 'Ext.Container',
-    xtype: 'datailview',
+    xtype: 'detailview',
     requires: [
         'Ext.TitleBar',
         'Ext.Button'
