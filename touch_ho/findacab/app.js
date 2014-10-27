@@ -50,7 +50,6 @@ Ext.application({
         '114': 'resources/icons/Icon@2x.png',
         '144': 'resources/icons/Icon~ipad@2x.png'
     },
-
     // iosが勝手にアイコンに光沢付けるのを禁止
     isIconPrecomposed: true,
 
